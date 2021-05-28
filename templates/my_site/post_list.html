@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>hello</title>
+</head>
+
+<body>
+{% for post in posts %}
+
+<a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+{% endfor %}
+
+{% include "pagination.html" with page=page_obj %}
+</body>
+</html>
